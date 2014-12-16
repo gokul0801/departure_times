@@ -6,7 +6,3 @@ It allows user to select Agency, followed by a route and or route direction and 
 
 App deployed on google app engine at  departuretimes.appspot.com
 
-To deploy locally:
- copy the git code
- python manage.py runserver
- http://127.0.0.1:8000/

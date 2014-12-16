@@ -3702,3 +3702,61 @@ DepartureTimes: 11, 22, 35 mins
 2014-12-15 23:53:09,206 DEBUG /home/gokul/DepartureTimes/rtt/views.py in selectRoutes():17 http://services.my511.org/Transit2.0/GetRoutesForAgency.aspx?agencyName=SF-MUNI&token=4272b807-452a-406b-b034-d2b471318fea
 2014-12-15 23:53:09,515 DEBUG /usr/lib/python2.6/site-packages/django/views/decorators/csrf.py in wrapped_view():52 [{'route': '1-California'}, {'route': '10-Townsend'}, {'route': '108-Treasure Island'}, {'route': '12-Folsom Pacific'}, {'route': '14-Mission'}, {'route': '14L-Mission Limited'}, {'route': '14X-Mission Express'}, {'route': '16X-Noriega Express'}, {'route': '17-Parkmerced'}, {'route': '18-46th Avenue'}, {'route': '19-Polk'}, {'route': '1AX-California A Express'}, {'route': '1BX-California B Express'}, {'route': '2-Clement'}, {'route': '21-Hayes'}, {'route': '22-Fillmore'}, {'route': '23-Monterey'}, {'route': '24-Divisadero'}, {'route': '27-Bryant'}, {'route': '28-19th Avenue'}, {'route': '28L-19th Avenue Limited'}, {'route': '29-Sunset'}, {'route': '3-Jackson'}, {'route': '30-Stockton'}, {'route': '30X-Marina Express'}, {'route': '31-Balboa'}, {'route': '31AX-Balboa A Express'}, {'route': '31BX-Balboa B Express'}, {'route': '33-Stanyan'}, {'route': '35-Eureka'}, {'route': '36-Teresita'}, {'route': '37-Corbett'}, {'route': '38-Geary'}, {'route': '38AX-Geary A Express'}, {'route': '38BX-Geary B Express'}, {'route': '38L-Geary Limited'}, {'route': '39-Coit'}, {'route': '41-Union'}, {'route': '43-Masonic'}, {'route': '44-OShaughnessy'}, {'route': '45-Union Stockton'}, {'route': '47-Van Ness'}, {'route': '48-Quintara 24th Street'}, {'route': '49-Van Ness Mission'}, {'route': '5-Fulton'}, {'route': '52-Excelsior'}, {'route': '54-Felton'}, {'route': '56-Rutland'}, {'route': '5L-Fulton Limited'}, {'route': '6-Parnassus'}, {'route': '66-Quintara'}, {'route': '67-Bernal Heights'}, {'route': '71-Haight Noriega'}, {'route': '71L-Haight Noriega Limited'}, {'route': '76X-Marin Headlands Express'}, {'route': '81X-Caltrain Express'}, {'route': '82X-Levi Plaza Express'}, {'route': '83X-Caltrain'}, {'route': '88-Bart Shuttle'}, {'route': '8AX-Bayshore A Express'}, {'route': '8BX-Bayshore B Express'}, {'route': '8X-Bayshore Express'}, {'route': '9-San Bruno'}, {'route': '90-San Bruno Owl'}, {'route': '91-Owl'}, {'route': '9L-San Bruno Limited'}, {'route': 'California Cable Car'}, {'route': 'F-Market And Wharves'}, {'route': 'J-Church'}, {'route': 'K-Owl'}, {'route': 'KT-Ingleside Third Street'}, {'route': 'L-Owl'}, {'route': 'L-Taraval'}, {'route': 'M-Ocean View'}, {'route': 'M-Owl'}, {'route': 'N-Judah'}, {'route': 'N-Owl'}, {'route': 'NX-N Express'}, {'route': 'Powell Hyde Cable Car'}, {'route': 'Powell Mason Cable Car'}, {'route': 'T-Owl'}]
 2014-12-15 23:53:09,515 DEBUG /usr/lib/python2.6/site-packages/django/views/decorators/csrf.py in wrapped_view():52 True
+2014-12-16 06:05:35,419 DEBUG /home/gokul/DepartureTimes-GAE/rtt/views.py in selectRoutes():17 http://services.my511.org/Transit2.0/GetRoutesForAgency.aspx?agencyName=BART&token=4272b807-452a-406b-b034-d2b471318fea
+2014-12-16 06:05:35,461 DEBUG /usr/lib/python2.6/site-packages/django/views/decorators/csrf.py in wrapped_view():52 [{'route': 'Daly City'}, {'route': 'Dublin Pleasanton'}, {'route': 'Fremont'}, {'route': 'Millbrae'}, {'route': 'North Concord'}, {'route': 'Pittsburg Bay Point'}, {'route': 'Richmond'}, {'route': 'SF Airport'}, {'route': 'SF Airport then Millbrae'}]
+2014-12-16 06:05:35,461 DEBUG /usr/lib/python2.6/site-packages/django/views/decorators/csrf.py in wrapped_view():52 False
+2014-12-16 06:05:36,788 DEBUG /usr/lib/python2.6/site-packages/django/views/decorators/csrf.py in wrapped_view():52 <QueryDict: {u'route': [u'Millbrae'], u'agency': [u'BART']}>
+2014-12-16 06:05:36,788 DEBUG /home/gokul/DepartureTimes-GAE/rtt/views.py in selectStops():49 None
+2014-12-16 06:05:38,906 DEBUG /usr/lib/python2.6/site-packages/django/views/decorators/csrf.py in wrapped_view():52 <QueryDict: {u'route': [u'Millbrae'], u'agency': [u'BART'], u'stop': [u'Powell St. (SF)']}>
+2014-12-16 06:05:38,962 DEBUG /usr/lib/python2.6/site-packages/django/views/decorators/csrf.py in wrapped_view():52 <Route Name:24th St. Mission, Code:587>
+<Stop Name:Powell St. (SF), Code:14>
+No data available..
+
+2014-12-16 06:05:38,963 DEBUG /usr/lib/python2.6/site-packages/django/views/decorators/csrf.py in wrapped_view():52 <Route Name:Concord, Code:886>
+<Stop Name:Powell St. (SF), Code:13>
+No data available..
+
+2014-12-16 06:05:38,963 DEBUG /usr/lib/python2.6/site-packages/django/views/decorators/csrf.py in wrapped_view():52 <Route Name:Daly City, Code:747>
+<Stop Name:Powell St. (SF), Code:14>
+DepartureTimes: 5, 24, 45 mins
+
+2014-12-16 06:05:38,963 DEBUG /usr/lib/python2.6/site-packages/django/views/decorators/csrf.py in wrapped_view():52 <Route Name:Dublin Pleasanton, Code:920>
+<Stop Name:Powell St. (SF), Code:13>
+DepartureTimes: 20, 40 mins
+
+2014-12-16 06:05:38,963 DEBUG /usr/lib/python2.6/site-packages/django/views/decorators/csrf.py in wrapped_view():52 <Route Name:Fremont, Code:917>
+<Stop Name:Powell St. (SF), Code:13>
+No data available..
+
+2014-12-16 06:05:38,963 DEBUG /usr/lib/python2.6/site-packages/django/views/decorators/csrf.py in wrapped_view():52 <Route Name:Millbrae, Code:764>
+<Stop Name:Powell St. (SF), Code:14>
+No data available..
+
+2014-12-16 06:05:38,963 DEBUG /usr/lib/python2.6/site-packages/django/views/decorators/csrf.py in wrapped_view():52 <Route Name:North Concord, Code:1027>
+<Stop Name:Powell St. (SF), Code:13>
+No data available..
+
+2014-12-16 06:05:38,963 DEBUG /usr/lib/python2.6/site-packages/django/views/decorators/csrf.py in wrapped_view():52 <Route Name:Pittsburg Bay Point, Code:908>
+<Stop Name:Powell St. (SF), Code:13>
+DepartureTimes: 13, 32, 52 mins
+
+2014-12-16 06:05:38,963 DEBUG /usr/lib/python2.6/site-packages/django/views/decorators/csrf.py in wrapped_view():52 <Route Name:Richmond, Code:762>
+<Stop Name:Powell St. (SF), Code:13>
+No data available..
+
+2014-12-16 06:05:38,963 DEBUG /usr/lib/python2.6/site-packages/django/views/decorators/csrf.py in wrapped_view():52 <Route Name:SF Airport, Code:722>
+<Stop Name:Powell St. (SF), Code:14>
+No data available..
+
+2014-12-16 06:05:38,963 DEBUG /usr/lib/python2.6/site-packages/django/views/decorators/csrf.py in wrapped_view():52 <Route Name:SF Airport then Millbrae, Code:1561>
+<Stop Name:Powell St. (SF), Code:14>
+DepartureTimes: 11, 30, 50 mins
+
+2014-12-16 06:05:38,963 DEBUG /usr/lib/python2.6/site-packages/django/views/decorators/csrf.py in wrapped_view():52 <Route Name:Millbrae, Code:764>
+<Stop Name:Powell St. (SF), Code:14>
+No data available..
+
+2014-12-16 06:05:38,963 DEBUG /usr/lib/python2.6/site-packages/django/views/decorators/csrf.py in wrapped_view():52 [<rtt.queries.Route instance at 0x7f67ec25b488>, <rtt.queries.Route instance at 0x7f67ec25be60>, <rtt.queries.Route instance at 0x7f67ec25bab8>, <rtt.queries.Route instance at 0x7f67ec25bea8>, <rtt.queries.Route instance at 0x7f67ec260098>, <rtt.queries.Route instance at 0x7f67ec2603b0>, <rtt.queries.Route instance at 0x7f67ec260638>, <rtt.queries.Route instance at 0x7f67ec2609e0>, <rtt.queries.Route instance at 0x7f67ec260a28>, <rtt.queries.Route instance at 0x7f67ec260b90>]
+2014-12-16 06:05:44,035 DEBUG /home/gokul/DepartureTimes-GAE/rtt/views.py in selectRoutes():17 http://services.my511.org/Transit2.0/GetRoutesForAgency.aspx?agencyName=SF-MUNI&token=4272b807-452a-406b-b034-d2b471318fea
+2014-12-16 06:05:44,178 DEBUG /usr/lib/python2.6/site-packages/django/views/decorators/csrf.py in wrapped_view():52 [{'route': '1-California'}, {'route': '10-Townsend'}, {'route': '108-Treasure Island'}, {'route': '12-Folsom Pacific'}, {'route': '14-Mission'}, {'route': '14L-Mission Limited'}, {'route': '14X-Mission Express'}, {'route': '16X-Noriega Express'}, {'route': '17-Parkmerced'}, {'route': '18-46th Avenue'}, {'route': '19-Polk'}, {'route': '1AX-California A Express'}, {'route': '1BX-California B Express'}, {'route': '2-Clement'}, {'route': '21-Hayes'}, {'route': '22-Fillmore'}, {'route': '23-Monterey'}, {'route': '24-Divisadero'}, {'route': '27-Bryant'}, {'route': '28-19th Avenue'}, {'route': '28L-19th Avenue Limited'}, {'route': '29-Sunset'}, {'route': '3-Jackson'}, {'route': '30-Stockton'}, {'route': '30X-Marina Express'}, {'route': '31-Balboa'}, {'route': '31AX-Balboa A Express'}, {'route': '31BX-Balboa B Express'}, {'route': '33-Stanyan'}, {'route': '35-Eureka'}, {'route': '36-Teresita'}, {'route': '37-Corbett'}, {'route': '38-Geary'}, {'route': '38AX-Geary A Express'}, {'route': '38BX-Geary B Express'}, {'route': '38L-Geary Limited'}, {'route': '39-Coit'}, {'route': '41-Union'}, {'route': '43-Masonic'}, {'route': '44-OShaughnessy'}, {'route': '45-Union Stockton'}, {'route': '47-Van Ness'}, {'route': '48-Quintara 24th Street'}, {'route': '49-Van Ness Mission'}, {'route': '5-Fulton'}, {'route': '52-Excelsior'}, {'route': '54-Felton'}, {'route': '56-Rutland'}, {'route': '5L-Fulton Limited'}, {'route': '6-Parnassus'}, {'route': '66-Quintara'}, {'route': '67-Bernal Heights'}, {'route': '71-Haight Noriega'}, {'route': '71L-Haight Noriega Limited'}, {'route': '76X-Marin Headlands Express'}, {'route': '81X-Caltrain Express'}, {'route': '82X-Levi Plaza Express'}, {'route': '83X-Caltrain'}, {'route': '88-Bart Shuttle'}, {'route': '8AX-Bayshore A Express'}, {'route': '8BX-Bayshore B Express'}, {'route': '8X-Bayshore Express'}, {'route': '9-San Bruno'}, {'route': '90-San Bruno Owl'}, {'route': '91-Owl'}, {'route': '9L-San Bruno Limited'}, {'route': 'California Cable Car'}, {'route': 'F-Market And Wharves'}, {'route': 'J-Church'}, {'route': 'K-Owl'}, {'route': 'KT-Ingleside Third Street'}, {'route': 'L-Owl'}, {'route': 'L-Taraval'}, {'route': 'M-Ocean View'}, {'route': 'M-Owl'}, {'route': 'N-Judah'}, {'route': 'N-Owl'}, {'route': 'NX-N Express'}, {'route': 'Powell Hyde Cable Car'}, {'route': 'Powell Mason Cable Car'}, {'route': 'T-Owl'}]
+2014-12-16 06:05:44,178 DEBUG /usr/lib/python2.6/site-packages/django/views/decorators/csrf.py in wrapped_view():52 True

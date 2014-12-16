@@ -2,7 +2,7 @@ from django.shortcuts import render
 from django.shortcuts import render_to_response, get_object_or_404
 from django.http import HttpResponse, HttpResponseRedirect
 from django.views.decorators.csrf import csrf_exempt, csrf_protect
-from rtt.queries import getAgencies, getRoutes, getDirectionsForRoute, getStopsForRoute, getDepartureTimes
+from rtt.queries_lxml import getAgencies, getRoutes, getDirectionsForRoute, getStopsForRoute, getDepartureTimes
 import json, log
 
 
