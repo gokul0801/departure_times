@@ -1,0 +1,47 @@
+<html>
+<head>
+    <link rel="stylesheet" type="text/css" href="/static/css/style.css" media="all"/>
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+    <script src="/static/js/main.js"></script>
+</head>
+<img src="/static/images/bayarea1.jpeg"/>
+<h3>Real-Time Departures for Bay Area Transit Systems</h3>
+
+<body>
+<div class="select-menu">
+<form action="displayTimes" method="POST">
+	{% csrf_token %}
+	<label for="agency">Transit Agency</label>
+  	<select id="agency" name="agency" class="select-menu">
+  	<option value="Select an Agency">Select an Agency</option>
+  	{% for agency in agencies %}
+ 	<option value="{{ agency.name }}">{{ agency.name }}</option>
+  	{% endfor %}
+  	</select><br>
+        <span id="routeInput">
+		<label for="route">Route</label>
+  		<select id="route" name="route" class="select-menu" disabled>
+       		<option>Select a Route</option>
+  		</select>
+        </span><br>
+	<span id="directionInput">
+		<label for="direction">Direction</label>
+  		<select id="direction" name="direction" class="select-menu" disabled>
+       		<option>Select a Direction</option>
+ 	        </select>
+	</span><br>
+	<span id="stopInput">
+		<label for="stop">Stop</label>
+  		<select id="stop" name="stop" class="select-menu" disabled>
+       		<option>Select a Stop</option>
+ 	        </select>
+	</span><br>
+<br/>
+<input id="submit" class="button blue" type="submit" value="Get Times"/>
+</form>
+<button id="startover">Start over</button>
+
+</div>
+
+</body>
+</html>
