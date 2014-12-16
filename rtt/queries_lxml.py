@@ -120,7 +120,6 @@ class Stop:
 def getAgencies():
   try:
     url = BASE_URL + 'GetAgencies.aspx?token=%s' % SECURITY_TOKEN
-    print url
     xml = getXml(url)
     dom = etree.parse(xml)
     agencies = []
@@ -128,7 +127,6 @@ def getAgencies():
 	name = agency.xpath('@Name')[0]
 	hasDirection = agency.xpath('@HasDirection')[0]
 	agency = Agency(name, hasDirection)
-	print agency
 	agencies.append(agency)
     return agencies
   except:
@@ -147,13 +145,11 @@ def getRoutes(agency):
        return routes_dict_cache[agency], hasDirection
     params = urllib.urlencode({'agencyName': agency})
     url = BASE_URL + 'GetRoutesForAgency.aspx?'+ params + '&token=%s' % SECURITY_TOKEN
-    print url
     log.debug(url)
     xml = getXml(url)
     dom = etree.parse(xml)
     routes = []
     hasDirection = dom.xpath('//RTT/AgencyList/Agency/@HasDirection')[0]
-    print hasDirection
     for route in dom.xpath('//RTT/AgencyList/Agency/RouteList/Route'):
 	routeName = route.xpath('@Name')[0]
 	routeCode = route.xpath('@Code')[0]
@@ -164,7 +160,6 @@ def getRoutes(agency):
 	       routeDirectionCode = routeDirection.xpath('@Code')[0]
 	       routeDirectionObj = RouteDirection(routeDirectionName, routeDirectionCode)
 	       routeObj.addRouteDirection(routeDirectionObj)
-        print routeObj	
 	routes.append(routeObj)
     routes_dict_cache[agency] = routes
     return routes, hasDirection
@@ -213,7 +208,6 @@ def getStopsForRoute(agency, routeName, routeDirectionName=None):
 	stopCode = stop.xpath('@StopCode')[0]
 	stopObj = Stop(stopName, stopCode)
 	stops.append(stopObj)
-	print stopName
     return stops
   except:
     raise Exception("Error getting stops for Agency %s, Route %s" % (agency, routeName))
@@ -225,7 +219,6 @@ def getDepartureTimes(agency, stopName):
   try:
     params = urllib.urlencode({'agencyName': agency, 'stopName': stopName})
     url = BASE_URL + 'GetNextDeparturesByStopName.aspx?' + params + '&token=%s' % SECURITY_TOKEN
-    print url
     xml = urllib2.urlopen(url)
     dom = etree.parse(xml)
     routeTimes = []
@@ -258,12 +251,11 @@ def getDepartureTimes(agency, stopName):
 	          for departureTime in stop.xpath('DepartureTimeList/DepartureTime'):
 	              stopObj.addDepartureTime(departureTime.text)
 	routeTimes.append(routeObj)
-	print routeObj
     return routeTimes
   except:
     raise Exception("Error getting departure times for Agency %s, Stop %s" % (agency, stopName))      
 
-
+### Used in testing for testing individual query functions
 if __name__ == '__main__':
    getAgencies()
    getRoutes('BART') 

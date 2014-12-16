@@ -20,8 +20,6 @@ def selectRoutes(req):
        for route in routes:
 	   response["routes"].append( {"route": route.name} )
        response["hasDirection"] = hasDirection
-       log.debug(response["routes"])
-       log.debug(response.get("hasDirection"))
        return HttpResponse(json.dumps(response), mimetype='application/json')
         
 
@@ -39,7 +37,6 @@ def selectDirections(req):
 @csrf_exempt
 def selectStops(req):
     if req.method == 'POST':
-       log.debug(req.POST)
        if 'direction' in req.POST:
 	   stopList = getStopsForRoute(req.POST['agency'],
 				       req.POST['route'],
@@ -65,20 +62,15 @@ def displayTimes(req):
        selectDirection = ''
        if 'direction' in req.POST:
 	 selectDirection = req.POST['direction']
-       log.debug(req.POST)
        routeTimesList = getDepartureTimes(agency, stop)
        outputRoute = None
        otherRoutes = []
-       for route in routeTimesList:
-           log.debug(route)
        for route in routeTimesList:
 	   if route.name == selectRoute:
 	      outputRoute = route
 	   else:
 	      otherRoutes.append(route)
     
-       log.debug(outputRoute)
-       log.debug(otherRoutes)
        return render_to_response('results.html', {'outputRoute': outputRoute,
 		                           	  'otherRoutes': otherRoutes,
 						  'routeName': selectRoute,
